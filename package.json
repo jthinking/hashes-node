@@ -36,5 +36,6 @@
   },
   "packageManager": "yarn@3.3.1",
   "repository": "https://github.com/jthinking/hashes-node.git",
-  "description": "Hashes utils for node.js based on napi-rs."
+  "description": "Hashes utils for node.js based on napi-rs.",
+  "keywords": ["md2", "md4", "md5", "sha1", "sha256", "sha512", "sha3_256", "sm3"]
 }
