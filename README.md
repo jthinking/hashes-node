@@ -14,10 +14,33 @@ npm i @jthinking/hashes-node
 - md4
 - md5
 - sha1
-- sha256
-- sha512
+- sha256 (sha2_256)
+- sha512 (sha2_512)
 - sha3_256
+- sha3_512
 - sm3
+- belt_hash
+- blake2s256
+- blake2b512
+- fsb512
+- fsb256
+- gost94
+- groestl256
+- groestl512
+- ripemd128
+- ripemd160
+- ripemd256
+- ripemd320
+- shabal192
+- shabal224
+- shabal256
+- shabal384
+- shabal512
+- streebog256
+- streebog512
+- tiger
+- tiger2
+- whirlpool
 
 ## Supported Platforms
 
@@ -25,40 +48,27 @@ npm i @jthinking/hashes-node
 - Windows arm64
 - macOS x64
 - macOS aarch64
-- Linux x64 gnu
-- Linux aarch64 gnu
+- Linux x64
+- Linux aarch64
 
 ## Usage
 
-```
+```js
 // import hashes-node
-import { md2, md4, md5, sha1, sha256, sha512, sha3_256, sm3 } = require('@jthinking/hashes-node')
+import { md5, sha256, sm3 } = require('@jthinking/hashes-node')
 
 // convert data to Buffer
 const buf = Buffer.from('123', 'UTF-8')
 
-// md2 hex
-const md2Hex = md2(buf)
-
-// md4 hex
-const md4Hex = md4(buf)
-
 // md5 hex
 const md5Hex = md5(buf)
-
-// sha1 hex
-const sha1Hex = sha1(buf)
 
 // sha256 hex
 const sha256Hex = sha256(buf)
 
-// sha512 hex
-const sha512Hex = sha512(buf)
-
-// sha3_256 hex
-const sha3_256Hex = sha3_256(buf)
-
 // sm3 hex
 const sm3Hex = sm3(buf)
 
+// other algorithms
+// ...
 ```

@@ -246,7 +246,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { md2, md4, md5, sha1, sha256, sha512, sha3_256, sm3 } = nativeBinding
+const { md2, md4, md5, sha1, sha256, sha512, sha2_256, sha2_512, sha3_256, sha3_512, sm3, belt_hash, blake2s256, blake2b512, fsb512, fsb256, gost94, groestl256, groestl512, ripemd128, ripemd160, ripemd256, ripemd320, shabal192, shabal224, shabal256, shabal384, shabal512, streebog256, streebog512, tiger, tiger2, whirlpool } = nativeBinding
 
 module.exports.md2 = md2
 module.exports.md4 = md4
@@ -254,5 +254,30 @@ module.exports.md5 = md5
 module.exports.sha1 = sha1
 module.exports.sha256 = sha256
 module.exports.sha512 = sha512
+module.exports.sha2_256 = sha2_256
+module.exports.sha2_512 = sha2_512
 module.exports.sha3_256 = sha3_256
+module.exports.sha3_512 = sha3_512
 module.exports.sm3 = sm3
+module.exports.belt_hash = belt_hash
+module.exports.blake2s256 = blake2s256
+module.exports.blake2b512 = blake2b512
+module.exports.fsb512 = fsb512
+module.exports.fsb256 = fsb256
+module.exports.gost94 = gost94
+module.exports.groestl256 = groestl256
+module.exports.groestl512 = groestl512
+module.exports.ripemd128 = ripemd128
+module.exports.ripemd160 = ripemd160
+module.exports.ripemd256 = ripemd256
+module.exports.ripemd320 = ripemd320
+module.exports.shabal192 = shabal192
+module.exports.shabal224 = shabal224
+module.exports.shabal256 = shabal256
+module.exports.shabal384 = shabal384
+module.exports.shabal512 = shabal512
+module.exports.streebog256 = streebog256
+module.exports.streebog512 = streebog512
+module.exports.tiger = tiger
+module.exports.tiger2 = tiger2
+module.exports.whirlpool = whirlpool
