@@ -17,6 +17,7 @@ export function sm3(buf: Buffer): string
 export function belt_hash(buf: Buffer): string
 export function blake2s256(buf: Buffer): string
 export function blake2b512(buf: Buffer): string
+export function blake3(buf: Buffer): string
 export function fsb512(buf: Buffer): string
 export function fsb256(buf: Buffer): string
 export function gost94(buf: Buffer): string

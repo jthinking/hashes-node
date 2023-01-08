@@ -38,13 +38,23 @@
   "repository": "https://github.com/jthinking/hashes-node.git",
   "description": "Hashes utils for node.js based on napi-rs.",
   "keywords": [
+    "belt-hash",
+    "blake2",
+    "blake3",
+    "fsb",
+    "gost94",
+    "groestl",
     "md2",
     "md4",
     "md5",
+    "ripemd",
     "sha1",
-    "sha256",
-    "sha512",
-    "sha3_256",
-    "sm3"
+    "sha2",
+    "sha3",
+    "shabal",
+    "sm3",
+    "streebog",
+    "tiger",
+    "whirlpool"
   ]
 }

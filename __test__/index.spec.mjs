@@ -1,32 +1,33 @@
 import {
+  belt_hash,
+  blake2b512,
+  blake2s256,
+  blake3,
+  fsb256,
+  fsb512,
+  gost94,
+  groestl256,
+  groestl512,
   md2,
   md4,
   md5,
-  sha1,
-  sha256,
-  sha512,
-  sha2_256,
-  sha2_512,
-  sha3_256,
-  sha3_512,
-  sm3,
-  belt_hash,
-  blake2s256,
-  blake2b512,
-  fsb512,
-  fsb256,
-  gost94,
-  groestl512,
-  groestl256,
   ripemd128,
   ripemd160,
   ripemd256,
   ripemd320,
+  sha1,
+  sha256,
+  sha2_256,
+  sha2_512,
+  sha3_256,
+  sha3_512,
+  sha512,
   shabal192,
   shabal224,
   shabal256,
   shabal384,
   shabal512,
+  sm3,
   streebog256,
   streebog512,
   tiger,
@@ -108,7 +109,6 @@ test("belt_hash from native", (t) => {
   );
 });
 
-
 test("blake2s256 from native", (t) => {
   t.is(
     blake2s256(Buffer.from("123")),
@@ -120,6 +120,13 @@ test("blake2b512 from native", (t) => {
   t.is(
     blake2b512(Buffer.from("123")),
     "e64cb91c7c1819bdcda4dca47a2aae98e737df75ddb0287083229dc0695064616df676a0c95ae55109fe0a27ba9dee79ea9a5c9d90cceb0cf8ae80b4f61ab4a3"
+  );
+});
+
+test("blake3 from native", (t) => {
+  t.is(
+    blake3(Buffer.from("123")),
+    "b3d4f8803f7e24b8f389b072e75477cdbcfbe074080fb5e500e53e26e054158e"
   );
 });
 
@@ -137,7 +144,6 @@ test("fsb256 from native", (t) => {
   );
 });
 
-
 test("gost94 from native", (t) => {
   t.is(
     gost94(Buffer.from("123")),
@@ -145,14 +151,12 @@ test("gost94 from native", (t) => {
   );
 });
 
-
 test("groestl512 from native", (t) => {
   t.is(
     groestl512(Buffer.from("123")),
     "659c4a2cfaa26c49bcd2c6d45b2749e74aac80b6a51d110d31845eacbaf6c2e7ae4cc1a164a9ac825079039f5ef00f97d2add48a31b0c24c307bced3c4a36ec6"
   );
 });
-
 
 test("groestl256 from native", (t) => {
   t.is(
@@ -162,12 +166,8 @@ test("groestl256 from native", (t) => {
 });
 
 test("ripemd128 from native", (t) => {
-  t.is(
-    ripemd128(Buffer.from("123")),
-    "781f357c35df1fef3138f6d29670365a"
-  );
+  t.is(ripemd128(Buffer.from("123")), "781f357c35df1fef3138f6d29670365a");
 });
-
 
 test("ripemd160 from native", (t) => {
   t.is(

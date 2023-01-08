@@ -8,6 +8,28 @@ Hashes utils for node.js based on [RustCrypto](https://github.com/RustCrypto/has
 npm i @jthinking/hashes-node
 ```
 
+## Usage
+
+```js
+// import hashes-node
+import { md5, blake3, sm3 } = require('@jthinking/hashes-node')
+
+// convert data to Buffer
+const buf = Buffer.from('123', 'UTF-8')
+
+// md5 hex
+const md5Hex = md5(buf)
+
+// blake3 hex
+const blake3Hex = blake3(buf)
+
+// sm3 hex
+const sm3Hex = sm3(buf)
+
+// other algorithms
+// ...
+```
+
 ## Supported Algorithms
 
 - md2
@@ -22,6 +44,7 @@ npm i @jthinking/hashes-node
 - belt_hash
 - blake2s256
 - blake2b512
+- blake3
 - fsb512
 - fsb256
 - gost94
@@ -47,28 +70,7 @@ npm i @jthinking/hashes-node
 - Windows x64
 - Windows arm64
 - macOS x64
-- macOS aarch64
+- macOS arm64
 - Linux x64
-- Linux aarch64
+- Linux arm64
 
-## Usage
-
-```js
-// import hashes-node
-import { md5, sha256, sm3 } = require('@jthinking/hashes-node')
-
-// convert data to Buffer
-const buf = Buffer.from('123', 'UTF-8')
-
-// md5 hex
-const md5Hex = md5(buf)
-
-// sha256 hex
-const sha256Hex = sha256(buf)
-
-// sm3 hex
-const sm3Hex = sm3(buf)
-
-// other algorithms
-// ...
-```

@@ -219,6 +219,21 @@ pub fn blake2b512(buf: Buffer) -> String {
 }
 
 #[napi]
+pub fn blake3(buf: Buffer) -> String {
+  // Hash an input incrementally.
+  let mut hasher = blake3::Hasher::new();
+
+  // write input message
+  hasher.update(&buf);
+
+  // read hash digest and consume hasher
+  let result = hasher.finalize();
+
+  // convert to hex string
+  result.to_hex().to_ascii_lowercase()
+}
+
+#[napi]
 pub fn fsb512(buf: Buffer) -> String {
   use fsb::{Fsb512, Digest};
   

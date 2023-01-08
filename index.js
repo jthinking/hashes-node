@@ -246,7 +246,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { md2, md4, md5, sha1, sha256, sha512, sha2_256, sha2_512, sha3_256, sha3_512, sm3, belt_hash, blake2s256, blake2b512, fsb512, fsb256, gost94, groestl256, groestl512, ripemd128, ripemd160, ripemd256, ripemd320, shabal192, shabal224, shabal256, shabal384, shabal512, streebog256, streebog512, tiger, tiger2, whirlpool } = nativeBinding
+const { md2, md4, md5, sha1, sha256, sha512, sha2_256, sha2_512, sha3_256, sha3_512, sm3, belt_hash, blake2s256, blake2b512, blake3, fsb512, fsb256, gost94, groestl256, groestl512, ripemd128, ripemd160, ripemd256, ripemd320, shabal192, shabal224, shabal256, shabal384, shabal512, streebog256, streebog512, tiger, tiger2, whirlpool } = nativeBinding
 
 module.exports.md2 = md2
 module.exports.md4 = md4
@@ -262,6 +262,7 @@ module.exports.sm3 = sm3
 module.exports.belt_hash = belt_hash
 module.exports.blake2s256 = blake2s256
 module.exports.blake2b512 = blake2b512
+module.exports.blake3 = blake3
 module.exports.fsb512 = fsb512
 module.exports.fsb256 = fsb256
 module.exports.gost94 = gost94
